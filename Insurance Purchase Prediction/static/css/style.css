@@ -1,0 +1,283 @@
+body{
+  background-image: url('bg.png');
+  background-blend-mode: darken;
+  color:rgb(0, 0, 0);
+  font-family: 'Vidaloka', serif;
+}
+
+.error{
+    color:rgb(255, 0, 0);
+    margin-top: 10px;
+    width: 100%;
+    font-size: 15px;
+}
+
+input{
+  background-color:black;
+  color: yellow;
+  border: 1px solid;
+  border-color: rgb(0, 0, 0);
+  padding: 5px;
+  border-radius: 4px;
+}
+
+label{
+  display: flex;
+  text-align: center;
+  color: rgb(251, 255, 0);
+  
+  font-weight: bold;
+}
+
+input::after{
+  background-color:black;
+  color: yellow;
+  border: 0.5px solid;
+  border-color: rgb(0, 0, 0);
+  padding: 5px;
+  border-radius: 4px;
+}
+
+
+::-moz-selection { /* Code for Firefox */
+  color: rgb(131, 0, 0);
+  background: rgb(46, 255, 46);
+  }
+
+::selection {
+color: rgb(0, 0, 0);
+background: rgb(85, 255, 43);
+border-radius: 30px;
+border-style: solid;
+}
+
+select{
+  background-color:black;
+  color: yellow;
+  border: 1px solid;
+  border-color: rgb(0, 3, 3);
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.typewriter {
+    margin-left: 0px;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .10em solid rgb(0, 140, 255); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .10em; /* Adjust as needed */
+    caret-color: rgb(0, 162, 255);
+    animation:
+      typing 25.0s steps(30, end),
+      blink-caret .45s step-end infinite;
+  }
+
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(0, 162, 255); }
+  }
+
+.box{
+  display:flex;
+    justify-content:center;
+}
+
+.inner{
+    margin-left: 10px;
+    padding: 20px;
+    border-color: rgb(229, 255, 0);
+    border-radius: 10px;
+    border-style: solid;
+}
+
+input{
+    width: 500px;
+}
+
+select{
+    width: 510px;
+}
+
+.butsub{
+  margin-top: 10px;
+  width:510px;
+  background: #fc00ff;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #e5ff00, #ffffff);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #5c3232, #ffee00);
+  font-family: 'Vidaloka', serif;
+}
+
+.butsub:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #ff1ead;
+  transition: all 0.35s;
+  border-radius: 4px;
+
+}
+
+.butsub:hover {
+  background: #fc00ff;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0026ff, #00ffff);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0026ff, #00ffff);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* color: #fff; */
+  transition: all 0.3s ease;
+  color: aliceblue;
+}
+
+.butsub:hover:after {
+  width: 100%
+}
+
+
+
+
+
+/* Timepass */
+
+
+.block {
+  margin-top:50px;
+  margin-left:500px;
+  position: relative;
+  width: 470px;
+  height: 100px;
+  background: linear-gradient(0deg, #000, #272727);
+}
+
+.block:before, .block:after {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+    #0000ff, #00ff00,#ffff00, #ff0000);
+  background-size: 400%;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  z-index: -1;
+  animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+h3{
+  padding-top: 35px;;
+  padding-left: 50px;
+  color: rgb(251, 255, 0);
+}
+
+.block:after {
+  filter: blur(50px);
+}
+
+@media screen and (max-width: 603px) {
+  input{
+    width: 300px;
+  }
+  body{
+    justify-content: center;
+    align-items: center;
+    display: block;
+    background-image: url('bg.png');
+    background-blend-mode: darken;
+    color:rgb(0, 0, 0);
+    font-family: 'Vidaloka', serif;
+    width: 100%;
+    height: auto;
+  }
+
+  select{
+    width:300px;
+  }
+  .butsub{
+    width:300px;
+  }
+  .inner{
+    margin-left: 100px;
+    margin-right:15px;
+    padding: 20px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    border-color: rgb(251, 255, 0);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    border-style: solid;
+  }
+
+  h1{
+    font-size: 25px;
+    color: aliceblue;
+    margin-left: 150px;
+  }
+
+  .wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+    margin-right: 800px;
+  }
+
+  h3{
+    color: white;
+    margin-right: 100px;
+    padding-top:0px;
+    padding-left: 100px;
+    font-size: 10px;
+    padding-top: 10px;
+  }
+
+  .block{
+    margin-left:350px;
+  }
+  .typewriter{
+    margin-left: 0px;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .10em solid rgb(0, 140, 255); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .10em; /* Adjust as needed */
+    caret-color: rgb(0, 162, 255);
+    width: 100%;
+    padding-right: 0%;
+    animation:
+      typing 7.0s steps(30, end),
+      blink-caret .45s step-end infinite;
+  }
+  .n{
+    margin-right: 180px;
+  }
+  .d{
+    margin-right: 180px;
+  }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Price Prediction</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <!-- <script>
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    </script>
+    <script>
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"
+    </script> -->
+<!--     
+    <script src="../js/form-validation.js"></script> -->
+</head>
+<body>
+    <div style="text-align:center;" class="typewriter">
+        <h1 style="color:white;">Insurance <br> Price <br> Prediction!</h1>
+        
+    </div>
+    <hr style="color:white;width:600px;">
+    <br>
+    <div class="box">
+        <div class="geeks">
+            <div class="inner bord">
+                <form id="admissionchecker" action="/predict" method="POST">
+                    <div>
+                        <label for="age">Age: </label>
+                        <br>
+                        <input type="number" id="age" name="age" placeholder="Enter your age here...." required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="sex">Sex: </label>
+                        <br>
+                        <select required name="sex" id="sex">
+                            <option value="" hidden>Select</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="bmi">Body Mass Index: </label>
+                        <br>
+                        <input type="number" step="any" id="bmi" name="bmi" placeholder="Enter your BMI here...." required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="children">No Of Children: </label>
+                        <br>
+                        <input type="number" id="children" name="children" placeholder="Enter No Of Children Score here...." required>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="smoker">Are You a Smoker? </label>
+                        <br>
+                        <select required name="smoker" id="smoker">
+                            <option value="" hidden>Select</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <label for="region">Which region do you belong to? </label>
+                        <br>
+                        <select required name="region" id="region">
+                            <option value="" hidden>Select</option>
+                            <option value="Southwest">Southwest</option>
+                            <option value="Southeast">Southeast</option>
+                            <option value="Northwest">Northwest</option>
+                            <option value="Northeast">Northeast</option>
+                        </select>
+                    </div>
+                    <br>
+                    <div>
+                        <input class="butsub" type="submit" value="Predict">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" ></script>
+    <script src="../static/js/form-validation.js" ></script>
+</body>
+</html>
