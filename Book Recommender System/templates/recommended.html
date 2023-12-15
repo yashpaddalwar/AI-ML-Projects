@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommendation System</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <div class="outer__main">
+        <div class="nav">
+            <div class="inner__nav">
+                <a class="aref" style="text-decoration: none;" href="/">Home</a>
+                <a class="aref" style="text-decoration: none;" href="/popularbooks">Popular Books</a>
+                <a class="aref" style="text-decoration: none;" href="/recommender">Recommender</a>
+            </div>
+        </div>
+        <div class="header">
+            <h1>Recommended Books for Search '{{user_input}}'</h1>
+        </div>
+        <br>
+        
+        {% if data %}
+                <div class="image__container">
+                    {% for i in data %}
+                    <div class="eachimage">
+                        
+                        <p class="booktitle">{{ i[0] }}</p>
+                        <p class="bookinfo">Author - {{ i[1] }}</p>
+                        <p class="bookinfo">Votes - {{ i[3] }}</p>
+                        <p class="bookinfo">Rating - {{ i[4] }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            
+        {% endif %}
+        
+    </div>
+</body>
+</html>
