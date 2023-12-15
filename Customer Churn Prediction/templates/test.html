@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict the Customer Churn</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <div class="outer__main">
+        <div class="nav">
+            <div class="inner__nav">
+                <a href="/">Home</a>
+                <a href="/test">Test</a>
+                <a href="/#footer">Contact</a>
+            </div>
+        </div>
+        <div class="form__container">
+            <div class="form__content">
+                <div class="header__container">
+                    <h1 class="header__content">Predict the Customer Churn....</h1>
+                </div>
+                <form action="/predict" method="POST" id="churnprediction">
+                    <div class="main__container">
+                    <div class="input__container">
+                        <div class="input__content">
+                            <div class="label__container">
+                                <label for="seniorcitizen">Are you a Senior Citizen?</label>
+                            </div>
+                            <br>
+                            <select name="seniorcitizen" id="seniorcitizen">
+                                <option value="select"  selected disabled hidden>Select</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input__container">
+                        <div class="input__content">
+                            <div class="label__container">
+                                <label for="monthlycharges">Monthly Charges</label>
+                            </div>
+                            <br>
+                            <input type="number" name="monthlycharges" id="monthlycharges">
+                        </div>
+                    </div>
+                    <div class="input__container">
+                        <div class="input__content">
+                            <div class="label__container">
+                                <label for="totalcharges">Total Charges</label>
+                            </div>
+                            <br>
+                            <input type="number" name="totalcharges" id="totalcharges">
+                        </div>
+                    </div>
+                    <div class="input__container">
+                        <div class="input__content">
+                            <div class="label__container">
+                                <label for="gender">Gender</label>
+                            </div>
+                            <br>
+                            <select name="gender" id="gender">
+                                <option value="select"  selected disabled hidden>Select</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input__container">
+                        <div class="input__content">
+                            <div class="label__container">
+                                <label for="partner">Do you have a partner?</label>
+                            </div>
+                            <br>
+                            <select name="partner" id="partner">
+                                <option value="select"  selected disabled hidden>Select</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input__container">
+                        <div class="input__content">
+                            <div class="label__container">
+                                <label for="dependent">Do you have any dependents?</label>
+                            </div>
+                            <br>
+                            <select name="dependent" id="dependent">
+                                <option value="select"  selected disabled hidden>Select</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input__container">
+                        <div class="input__content">
+                            <div class="label__container">
+                                <label for="phoneservice">Do you have a Phone Service?</label>
+                            </div>
+                            <br>
+                            <select name="phoneservice" id="phoneservice">
+                                <option value="select"  selected disabled hidden>Select</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input__container">
+                        <div class="input__content">
+                            <div class="label__container">
+                                <label for="multiplelinesphoneservice">Do you have a Multiple Line Phone Service?</label>
+                            </div>
+                            <br>
+                            <select name="multiplelinesphoneservice" id="multiplelinesphoneservice">
+                                <option value="select"  selected disabled hidden>Select</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Nophoneservice">No Phone Service at all</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input__container">
+                        <div class="input__content">
+                            <div class="label__container">
+                                <label for="internetservice">Which Internet Service do you have?</label>
+                            </div>
+                            <br>
+                            <select name="internetservice" id="internetservice">
+                                <option value="select"  selected disabled hidden>Select</option>
+                                <option value="DSL">DSL</option>
+                                <option value="FibreOptic">Fibre Optic</option>
+                                <option value="Nointernetservice">No Internet Service at all</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input__container">
+                        <div class="input__content">
+                            <div class="label__container">
+                                <label for="onlinesecurity">Do you have Online Security?</label>
+                            </div>
+                            <br>
+                            <select name="onlinesecurity" id="onlinesecurity">
+                                <option value="select"  selected disabled hidden>Select</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Noonlinesecurity">No Internet Service at all</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input__container">
+                        <div class="input__content">
+                            <div class="label__container">
+                                <label for="onlinebackup">Do you have Online Backup?</label>
+                            </div>
+                            <br>
+                            <select name="onlinebackup" id="onlinebackup">
+                                <option value="select"  selected disabled hidden>Select</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Nointernetbackup">No Internet Service at all</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input__container">
+                        <div class="input__content">
+                            <div class="label__container">
+                                <label for="deviceprotection">Do you have Device Protection?</label>
+                            </div>
+                            <br>
+                            <select name="deviceprotection" id="deviceprotection">
+                                <option value="select"  selected disabled hidden>Select</option>
+                                <option value="Yes">Yes</option>
+                                <option value="Yo">No</option>
+                                <option value="Nodeviceprotection">No Internet Service at all</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input__container">
+                        <div class="input__content">
+                            <div class="label__container">
+                                <label for="techsupport">Do you have Tech Support?</label>
+                            </div>
+                            <br>
+                            <select name="techsupport" id="techsupport">
+                                <option value="select"  selected disabled hidden>Select</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Notechsupport">No Internet Service at all</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input__container">
+                        <div class="input__content">
+                            <div class="label__container">
+                                <label for="streamingtv">Do you watch Streaming TV?</label>
+                            </div>
+                            <br>
+                            <select name="streamingtv" id="streamingtv">
+                                <option value="select"  selected disabled hidden>Select</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Nostreamingtv">No Internet Service at all</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input__container">
+                        <div class="input__content">
+                            <div class="label__container">
+                                <label for="streamingmovies">Do you watch Streaming Movies?</label>
+                            </div>
+                            <br>
+                            <select name="streamingmovies" id="streamingmovies">
+                                <option value="select"  selected disabled hidden>Select</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                                <option value="Nostreamingmovies">No Internet Service at all</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input__container">
+                        <div class="input__content">
+                            <div class="label__container">
+                                <label for="contract">Contract Type</label>
+                            </div>
+                            <br>
+                            <select name="contract" id="contract">
+                                <option value="select"  selected disabled hidden>Select</option>
+                                <option value="Monthly">Monthly</option>
+                                <option value="One">One Year</option>
+                                <option value="Two">Two Year</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input__container">
+                        <div class="input__content">
+                            <div class="label__container">
+                                <label for="paperlessbilling">Is your Billing type Paperless?</label>
+                            </div>
+                            <br>
+                            <select name="paperlessbilling" id="paperlessbilling">
+                                <option value="select"  selected disabled hidden>Select</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input__container">
+                        <div class="input__content">
+                            <div class="label__container">
+                                <label for="paymentmethod">What's you Payment Method?</label>
+                            </div>
+                            <br>
+                            <select name="paymentmethod" id="paymentmethod">
+                                <option value="select"  selected disabled hidden>Select</option>
+                                <option value="Electroniccheck">Electronic Cheque</option>
+                                <option value="Mailedcheck">Mailed Cheque</option>
+                                <option value="Banktransfer">Bank Transfer</option>
+                                <option value="Creditcard">Credit Card</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="input__container">
+                        <div class="input__content">
+                            <div class="label__container">
+                                <label for="tenure">Tenure Group</label>
+                            </div>
+                            <br>
+                            <select name="tenure" id="tenure">
+                                <option value="select"  selected disabled hidden>Select</option>
+                                <option value="Twelve">Tenure Group - (12 - 24)</option>
+                                <option value="Twentyfour">Tenure Group - (24 - 36)</option>
+                                <option value="Thirtysix">Tenure Group - (36 - 48)</option>
+                                <option value="Fortyeight">Tenure Group - (48 - 60)</option>
+                                <option value="Sixty">Tenure Group - (60 - 72)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-primary">
+                    <button class="btn" type="submit">Submit</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" ></script>
+    <script src="../static/js/form-validation.js" ></script>
+</body>
+</html>
